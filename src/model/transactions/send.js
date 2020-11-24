@@ -2,7 +2,6 @@ import Helpers from '../../utils/helpers';
 import Convert from '../../utils/convert';
 import Serialization from '../../utils/serialization';
 import KeyPair from '../../crypto/keyPair';
-import Requests from '../../com/requests';
 
 /**
  * Serialize a transaction and broadcast it to the network
@@ -24,7 +23,7 @@ let send = function(common, entity, endpoint) {
         'data': Convert.ua2hex(result),
         'signature': signature.toString()
     };
-    return Requests.transaction.announce(endpoint, JSON.stringify(obj));
+    return obj
 }
 
 export default send;

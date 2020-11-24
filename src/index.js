@@ -15,10 +15,8 @@ import sinks from './model/sinks';
 import wallet from './model/wallet';
 import transactions from './model/transactions';
 import objects from './model/objects';
-import requests from './com/requests';
 import fees from './model/fees';
 import CryptoJS from 'crypto-js';
-import websockets from './com/websockets';
 import apostille from './model/apostille';
 
 export default {
@@ -49,9 +47,5 @@ export default {
 		nty,
 		serialization,
 		format
-	},
-	com: {
-		requests,
-		websockets
 	}
 };
